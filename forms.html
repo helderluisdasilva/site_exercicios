@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>HTML5 e CSS3 - Formulário</title>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML e CSS</h1>
+        <p>Site para treino de HTML5 e CSS3</p>
+    </header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="tabelas.html">Tabelas</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="iframes.html">iFrames</a>
+        <a href="forms.html">Formulário</a>
+    </nav>
+    <main>
+        <section>
+            <h1>Formulários</h1>
+            <h2>Cadastre-se</h2>
+            <form name="formulario_cadastro" method="get" action="#">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" placeholder="Informe seu nome">
+
+                <label for="data_nascimento">Data de nascimento</label>
+                <input type="date" name="data_nascimento">
+
+                <label for="email">E-Mail</label>
+                <input type="address" name="email" placeholder="Informe seu email">
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" placeholder="Digite a sua senha">
+
+                <label for="sexo">Sexo</label>
+                <input type="radio" name="sexo" value="masculino"> Masculino
+                <input type="radio" name="sexo" value="feminino"> Feminino
+
+                <label for="pais">Selecione seu país</label>
+                <select name="pais">
+                    <option value="brasil" selected>Brasil</option>
+                    <option value="canada">Canadá</option>
+                    <option value="egito">Egito</option>
+                    <option value="usa">Estados Unidos</option>
+                    <option value="inglaterra">Inglaterra</option>
+                    <option value="japao">Japão</option>
+                    <option value="russia">Rússia</option>
+                </select>
+
+                <input type="submit" name="enviar" value="Cadastrar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Exercícios de HTML e CSS&copy; - Todos os direitos reservados &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Site criado por Helder Luis</p>
+    </footer>
+</body>
+</html>

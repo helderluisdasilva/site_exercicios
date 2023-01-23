@@ -1,0 +1,265 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Bungee";
+    src: url("../fonts/Bungee-Regular.ttf") format("truetype");
+}
+
+/*==========ESTRUTURA PRINCIPAL==========*/
+
+:root{
+    --fonte-principal:Verdana, Geneva, Tahoma, sans-serif;
+    --fonte-destaque:'Trebuchet MS', Verdana, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image:url("../img/foto_background.jpg");
+    background-size:cover;
+    background-attachment:fixed;
+    font-family:var(--fonte-principal);
+}
+
+header{
+    width: 100%;
+    min-width:300px;
+    height:130px;
+    background-color:rgba(0,0,0,0.85);
+    color:#FFF;
+    text-align:center;
+    padding:10px 0;
+    font-family:Bungee,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header h1{
+    font-size:3em;
+}
+
+header p{
+    margin-top:-40px;
+}
+
+nav{
+    width:100%;
+    min-width:300px;
+    height:60px;
+    margin-top:1px;
+    background-color:rgba(0, 0, 0, 0.9);
+    text-align:center;
+    box-shadow:0 3px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-family: var(--fonte-destaque);
+    font-size:17px;
+    font-weight:bold;
+    display:inline-block;
+    padding:20px;
+    transition-duration:0.3s;
+    margin:0 -3px;
+}
+
+nav a:hover{
+    background-color:rgba(255,255,255,0.9);
+    color:#333;
+}
+
+main{
+    width:90vw;
+    max-width:1280px;
+    min-width:300px;
+    min-height:90vh;
+    margin:0 auto 20px auto;
+    background-color:#FFF;
+    border-radius:0 0 15px 15px;
+    box-shadow:0 0 10px 5px rgba(0, 0, 0, 0.5);
+    padding:20px;
+}
+
+main h1{
+    color:#333;
+    border-bottom:1px dotted #333;
+    font-size:2.5em;
+    padding-bottom:5px;
+    margin:20px 0 30px 0;
+    font-variant: small-caps;
+    font-family: var(--fonte-destaque);
+}
+
+main h2{
+    font-size:1.5em;
+    color:#333;
+    margin:30px 0 10px 0;
+    font-variant: small-caps;
+    background-image:linear-gradient(to right,#DEDEDE,transparent);
+    padding:3px 0 3px 5px;
+    font-family: var(--fonte-destaque);
+}
+
+main p{
+    margin:10px 0;
+    text-align:justify;
+    text-indent: 30px;
+    line-height: 2em;
+}
+
+main p > code{
+    font-size:1.4em;
+    font-weight:bold;
+}
+
+footer{
+    width:100%;
+    height:20px;
+    background-color:rgba(0,0,0,0.85);
+    color:#FFF;
+    text-align: center;
+    padding:22px 0;
+    font-weight:bold;
+    text-transform: uppercase;
+    font-size:0.9em;
+    box-shadow:0 -3px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+/*----------TABELAS----------*/
+table{
+    width:100%;
+    margin:20px 0 100px 0;
+    border-collapse: collapse;
+}
+
+caption{
+    background-image:linear-gradient(to bottom, #333, #222);
+    color:#FFF;
+    padding:10px 0;
+    text-align:center;
+    font-weight:bold;
+    font-variant: small-caps;
+    border:1px solid black;
+    border-radius:15px 15px 0 0;
+}
+
+th, td{
+    border:1px solid black;
+    padding:10px;
+}
+
+th{
+    background-color:#555;
+    color:#FFF;
+    font-weight:bold;
+    font-variant: small-caps;
+}
+
+tbody tr:nth-child(odd){
+    background-color:#DDD;
+}
+
+#tabela_filmes tbody tr td:first-child, #tabela_jogos tbody tr td:first-child{
+    text-align:center;
+}
+
+#tabela_filmes tbody tr td:last-child{
+    text-align:right;
+}
+
+#tabela_filmes thead th:first-child{
+    width:5%;
+}
+
+#tabela_jogos thead th:first-child{
+    width:5%;
+}
+
+/*==========GALERIA==========*/
+
+#galeria img{
+    width:30.22%;
+    display:inline-block;
+    margin:1.4%;
+    transition-duration:0.3s;
+}
+
+#galeria img:hover{
+    transform: scale(1.15);
+}
+
+iframe{
+    border-radius:15px;
+    border:5px solid #DDD;
+}
+
+iframe > span{
+    background-color:#900;
+    color:white;
+    padding:10px;
+    text-align:center;
+    width:100%;
+}
+
+form{
+    border:2px dotted #CCC;
+    padding:10px;
+}
+
+form label{
+    display: block;
+    padding:20px 0 5px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+input[type=text], input[type=address], input[type=password]{
+    width:40%;
+    background-color:#EEE;
+    border:1px solid #333;
+    padding:10px;
+}
+
+input:focus{
+    background-color:#FFF;
+}
+
+input[type=date]{
+    width:20%;
+    border:1px solid #333;
+    padding:5px;
+    font-weight:bold;
+}
+
+input[name=sexo]:last-child{
+    margin-left:20px;
+}
+
+select[name=pais]{
+    display:block;
+    width:30%;
+    padding:5px;
+    background-color:#EEE;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
+select[name=pais] > option:nth-child(odd){
+    background-color:#DDD;
+}
+
+input[type=submit]{
+    border:1px solid #333;
+    background-color:#555;
+    color:#FFF;
+    padding:10px;
+    font-weight:bold;
+    transition-duration:.3s;;
+}
+
+input[type=submit]:hover{
+    cursor:pointer;
+    background-color:#EEE;
+    color:#333;
+}
