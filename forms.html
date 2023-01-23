@@ -24,19 +24,19 @@
             <h2>Cadastre-se</h2>
             <form name="formulario_cadastro" method="get" action="#">
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" placeholder="Informe seu nome">
+                <input type="text" name="nome" placeholder="Informe seu nome" id="nome" required>
 
                 <label for="data_nascimento">Data de nascimento</label>
-                <input type="date" name="data_nascimento">
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
 
                 <label for="email">E-Mail</label>
-                <input type="address" name="email" placeholder="Informe seu email">
+                <input type="address" name="email" placeholder="Informe seu email" id="email" required>
 
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" placeholder="Digite a sua senha">
+                <input type="password" name="senha" placeholder="Digite a sua senha" id="senha" required maxlength="15" minlength="8">
 
                 <label for="sexo">Sexo</label>
-                <input type="radio" name="sexo" value="masculino"> Masculino
+                <input type="radio" name="sexo" value="masculino" checked> Masculino
                 <input type="radio" name="sexo" value="feminino"> Feminino
 
                 <label for="pais">Selecione seu país</label>
