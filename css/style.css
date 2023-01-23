@@ -251,7 +251,7 @@ select[name=pais] > option:nth-child(odd){
     background-color:#DDD;
 }
 
-input[type=submit]{
+input[type=submit], input[type=reset]{
     border:1px solid #333;
     background-color:#555;
     color:#FFF;
@@ -260,7 +260,7 @@ input[type=submit]{
     transition-duration:.3s;;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover, input[type=reset]:hover{
     cursor:pointer;
     background-color:#EEE;
     color:#333;
