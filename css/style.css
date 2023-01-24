@@ -129,7 +129,7 @@ footer{
 }
 
 #vermelho:hover{
-    transform: translate(45vw,0);
+    transform: translate(40vw,0);
     background-color:#F00;
     cursor:pointer;
     border-radius: 20px;
@@ -188,7 +188,7 @@ footer{
 
 #rotacao:hover{
     background-color:#990;
-    transform: translate(40vw,0) rotate(720deg);
+    transform: translate(35vw,0) rotate(720deg);
     cursor:pointer;
 }
 
