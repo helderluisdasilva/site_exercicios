@@ -291,7 +291,22 @@ form label{
     font-weight: bold;
 }
 
-input[type=text], input[type=address], input[type=password]{
+form > fieldset{
+    margin:20px 0;
+    padding:20px;
+    border:1px dotted #333;
+}
+
+form > fieldset > legend{
+    font-variant: small-caps;
+    font-weight: bold;
+    background-color:#333;
+    padding:5px;
+    border:1px dotted #333;
+    color:white;
+}
+
+input[type=text], input[type=address], input[type=password], input[type=tel]{
     width:40%;
     background-color:#EEE;
     border:1px solid #333;
@@ -302,7 +317,7 @@ input:focus{
     background-color:#FFF;
 }
 
-input[type=date]{
+input[type=date], select[name=estado]{
     width:20%;
     border:1px solid #333;
     padding:5px;
@@ -318,7 +333,6 @@ select[name=pais]{
     width:30%;
     padding:5px;
     background-color:#EEE;
-    margin-bottom:20px;
     border-radius:10px;
 }
 
@@ -339,4 +353,41 @@ input[type=submit]:hover, input[type=reset]:hover{
     cursor:pointer;
     background-color:#EEE;
     color:#333;
+}
+
+#out_dificuldade strong{
+    padding:3px;
+    border:1px dotted #333;
+    color:#009;
+}
+
+#cor{
+    background-color:#FFF;
+    border:1px dashed #333;
+    padding:3px;
+    width:50px;
+    height:50px;
+    margin:5px;
+}
+
+#lista_esportes{
+    border:1px dashed #333;
+    background-color:#EEE;
+    padding:20px;
+    margin:20px 0;
+    width:fit-content;
+}
+
+#lista_esportes > legend{
+    padding:5px;
+    border:1px dashed #333;
+    font-weight:bold;
+    font-variant: small-caps;
+    background-color:#CCC;
+    border-radius:10px 10px 0 0;
+}
+
+#lista_esportes label{
+    display:inline-block;
+    margin-left:10px;
 }

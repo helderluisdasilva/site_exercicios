@@ -22,39 +22,135 @@
         <section>
             <h1>Formulários</h1>
             <h2>Cadastre-se</h2>
-            <form name="formulario_cadastro" method="get" action="#">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" placeholder="Informe seu nome" id="nome" required>
+            <form name="formulario_cadastro" method="POST" action="#">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" placeholder="Informe seu nome" id="nome" autocomplete="name" required>
+                    <label for="data_nascimento">Data de nascimento</label>
+                    <input type="date" name="data_nascimento" id="data_nascimento" autocomplete="bday" required>
+                    <label for="email">E-Mail</label>
+                    <input type="address" name="email" placeholder="Informe seu email" id="email" autocomplete="email" required>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Digite a sua senha" id="senha" required maxlength="15" minlength="8" autocomplete="new-password">
+                    <label for="sexo">Sexo</label>
+                    <input type="radio" name="sexo" value="masculino" checked> Masculino
+                    <input type="radio" name="sexo" value="feminino"> Feminino
+                    <label for="estado">Selecione o estado em que você mora</label>
+                    <select name="estado" required>
+                        <option value="" disabled selected>Selecione um estado</option>
+                        <optgroup label="Sudeste">
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="MG">Minas Gerais</option>
+                        </optgroup>
+                        <optgroup label="Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                        </optgroup>
+                        <optgroup label="Centro-Oeste">
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                        </optgroup>
+                        <optgroup label="Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="PA">Pará</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="TO">Tocantins</option>
+                        </optgroup>
+                        <optgroup label="Nordeste">
+                            <option value="MA">Maranhão</option>
+                            <option value="PI">Piauí</option>
+                            <option value="CE">Ceará</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="BA">Bahia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
 
-                <label for="data_nascimento">Data de nascimento</label>
-                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <fieldset>
+                    <legend>Informações extras</legend>
+                    <label for="dificuldade">Selecione seu número favorito de 0 a 10</label>
+                    <input type="range" name="dificuldade" id="dificuldade" min="0" max="10" step="1" oninput="atualizarRange();">
+                    <output id="out_dificuldade"><strong>5</strong></output>
 
-                <label for="email">E-Mail</label>
-                <input type="address" name="email" placeholder="Informe seu email" id="email" required>
+                    <label for="videogame">Qual o seu console favorito?</label>
+                    <input type="text" name="videogame" id="videogame" list="consoles">
+                    <datalist id="consoles">
+                        <option>Atari 2600</option>
+                        <option>Atari 5200</option>
+                        <option>Atari 7800</option>
+                        <option>Sega Master System</option>
+                        <option>Sega Genesis / Mega Drive</option>
+                        <option>Sega Saturn</option>
+                        <option>Sega Dreamcast</option>
+                        <option>Neo Geo</option>
+                        <option>Nintendo NES</option>
+                        <option>Super Nintendo</option>
+                        <option>Nintendo GameCube</option>
+                        <option>Nintendo WII</option>
+                        <option>Nintendo WII U</option>
+                        <option>Nintendo Switch</option>
+                        <option>Sony PlayStation</option>
+                        <option>Sony PlayStation 3</option>
+                        <option>Sony PlayStation 2</option>
+                        <option>Sony PlayStation 4</option>
+                        <option>Sony PlayStation 5</option>
+                        <option>Xbox</option>
+                        <option>Xbox 360</option>
+                        <option>Xbox One</option>
+                        <option>Xbox Series</option>
+                    </datalist>
 
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" placeholder="Digite a sua senha" id="senha" required maxlength="15" minlength="8">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" autocomplete="tel">
 
-                <label for="sexo">Sexo</label>
-                <input type="radio" name="sexo" value="masculino" checked> Masculino
-                <input type="radio" name="sexo" value="feminino"> Feminino
+                    <label for="cor">Qual a sua cor favorita?</label>
+                    <input type="color" name="cor" id="cor" value="#006699">
 
-                <label for="pais">Selecione seu país</label>
-                <select name="pais">
-                    <option value="brasil" selected>Brasil</option>
-                    <option value="canada">Canadá</option>
-                    <option value="egito">Egito</option>
-                    <option value="usa">Estados Unidos</option>
-                    <option value="inglaterra">Inglaterra</option>
-                    <option value="japao">Japão</option>
-                    <option value="russia">Rússia</option>
-                </select>
+                    <fieldset id="lista_esportes">
+                        <legend>Selecione os seus esportes favoritos</legend>
+                        <input type="checkbox" name="esp_futebol" id="esp_futebol" checked><label for="esp_futebol">Futebol</label><br>
+                        <input type="checkbox" name="esp_volei" id="esp_volei" checked><label for="esp_volei">Vôlei</label><br>
+                        <input type="checkbox" name="esp_tenis" id="esp_tenis"><label for="esp_tenis">Tênis</label><br>
+                        <input type="checkbox" name="esp_tenisDeMesa" id="esp_tenisDeMesa"><label for="esp_tenisDeMesa">Tênis de Mesa</label><br>
+                        <input type="checkbox" name="esp_natacao" id="esp_natacao"><label for="esp_natacao">Natação</label><br>
+                        <input type="checkbox" name="esp_futsal" id="esp_futsal"><label for="esp_futsal">Futsal</label><br>
+                        <input type="checkbox" name="esp_capoeira" id="esp_capoeira"><label for="esp_capoeira">Capoeira</label><br>
+                        <input type="checkbox" name="esp_skate" id="esp_skate"><label for="esp_skate">Skate</label><br>
+                        <input type="checkbox" name="esp_surfe" id="esp_surfe"><label for="esp_surfe">Surfe</label><br>
+                        <input type="checkbox" name="esp_judo" id="esp_judo"><label for="esp_judo">Judô</label><br>
+                        <input type="checkbox" name="esp_atletismo" id="esp_atletismo"><label for="esp_atletismo">Atletismo</label><br>
+                        <input type="checkbox" name="esp_basquete" id="esp_basquete" checked><label for="esp_basquete">Basquete</label><br>
+                        <input type="checkbox" name="esp_rugby" id="esp_rugby"><label for="esp_rugby">Rugby</label>
+                    </fieldset>
+                </fieldset>
 
-                <input type="reset" name="limpar" value="Limpar">
+                <input type="reset" name="limpar" onclick="atualizarRange(5);" value="Limpar">
                 <input type="submit" name="enviar" value="Cadastrar">
             </form>
         </section>
     </main>
+    <script>
+        function atualizarRange(n){
+            if(n == null){
+                out_dificuldade.innerHTML = "<strong>" + dificuldade.value + "</strong>";
+            }else{
+                out_dificuldade.innerHTML = "<strong>" + 5 + "</strong>";
+            }
+        }
+    </script>
     <footer>
         <p>Exercícios de HTML e CSS&copy; - Todos os direitos reservados &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Site criado por Helder Luis</p>
     </footer>
